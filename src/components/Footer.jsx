@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 const PORTALS = [
@@ -88,13 +89,31 @@ export default function Footer() {
               Company
             </h4>
             <ul className="space-y-3">
-              {['About PawConnect', 'Contact Us', 'Privacy Policy', 'Terms of Service'].map((item) => (
-                <li key={item}>
-                  <span className="text-gray-400 text-sm font-medium cursor-pointer hover:text-pink-main transition-colors">
-                    {item}
-                  </span>
-                </li>
-              ))}
+              <li>
+                <span className="text-gray-400 text-sm font-medium cursor-pointer hover:text-pink-main transition-colors">
+                  About PawConnect
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-400 text-sm font-medium cursor-pointer hover:text-pink-main transition-colors">
+                  Contact Us
+                </span>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="text-gray-400 text-sm font-medium hover:text-pink-main transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/delete-account" className="text-gray-400 text-sm font-medium hover:text-pink-main transition-colors">
+                  Delete Account
+                </Link>
+              </li>
+              <li>
+                <span className="text-gray-400 text-sm font-medium cursor-pointer hover:text-pink-main transition-colors">
+                  Terms of Service
+                </span>
+              </li>
             </ul>
           </div>
         </div>
